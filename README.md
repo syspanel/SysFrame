@@ -54,20 +54,20 @@ See \`examples/\` folder for Controllers, Middlewares, and Services.
 
 ## Route Groups
 
-\`\`\`php
-\$app->group('/api', function(\$router) {
+
+$app->group('/api', function(\$router) {
     \$router->get('/users', [UserController::class, 'list']);
     \$router->get('/user/{id:\d+}', [UserController::class, 'show']);
 }, [AuthMiddleware::class]);
-\`\`\`
+
 
 ---
 
 ## Named Routes
 
-\`\`\`php
-\$app->get('/user/{id:\d+}', [UserController::class, 'show'])->name('user.show');
-\`\`\`
+
+$app->get('/user/{id:\d+}', [UserController::class, 'show'])->name('user.show');
+
 
 ---
 
@@ -76,13 +76,13 @@ See \`examples/\` folder for Controllers, Middlewares, and Services.
 - **Global Middleware:** runs for every request
 - **Route Middleware:** runs only for specific routes
 
-\`\`\`php
+
 // Global middleware
-\$app->addMiddleware(SomeMiddleware::class);
+$app->addMiddleware(SomeMiddleware::class);
 
 // Route-specific
-\$app->get('/admin', [AdminController::class, 'index'], [AuthMiddleware::class]);
-\`\`\`
+$app->get('/admin', [AdminController::class, 'index'], [AuthMiddleware::class]);
+
 
 ---
 
@@ -90,7 +90,7 @@ See \`examples/\` folder for Controllers, Middlewares, and Services.
 
 SysFrame uses PHP-DI. You can inject services directly into controllers:
 
-\`\`\`php
+
 class UserController
 {
     private UserService \$service;
@@ -107,7 +107,7 @@ class UserController
         return \$response;
     }
 }
-\`\`\`
+
 
 ---
 
@@ -120,7 +120,7 @@ You can use `ServerRequestInterface` and `ResponseInterface` in all handlers and
 
 ## Folder Structure
 
-\`\`\`
+
 sysframe/
  ├── src/                  # Core framework
  ├── examples/             # Controllers, Services, Middlewares
@@ -128,7 +128,7 @@ sysframe/
  ├── composer.json
  ├── README.md
  └── .gitignore
-\`\`\`
+
 
 ---
 
