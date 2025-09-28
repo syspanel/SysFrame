@@ -35,15 +35,14 @@ Oficial website: https://sysframe.syspanel.com.br
 
 Install via Composer:
 
-\`\`\`bash
 composer require sysframe/sysframe
-\`\`\`
+
 
 Include Composer autoload:
 
-\`\`\`php
+
 require 'vendor/autoload.php';
-\`\`\`
+
 
 ---
 
