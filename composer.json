@@ -1,0 +1,19 @@
+{
+    "name": "sysframe/sysframe",
+    "description": "A minimal PHP micro-framework with PHP-DI integration, route groups, middlewares and PSR-7 support",
+    "type": "library",
+    "require": {
+        "php": ">=8.1",
+        "php-di/php-di": "^7.0",
+        "nyholm/psr7": "^1.5",
+        "nyholm/psr7-server": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SysFrame\\": "src/",
+            "App\\": "examples/"
+        }
+    },
+    "license": "MIT",
+    "minimum-stability": "stable"
+}
